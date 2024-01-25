@@ -51,10 +51,6 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-fs.writeFile('README.md', generateMarkdown, (err) => {
-    if (err) throw err;
-    console.log('README.md file has been created!');
-})
 
 function writeFile(fileName, generateMarkdown) {
     if (err) {
@@ -62,6 +58,10 @@ function writeFile(fileName, generateMarkdown) {
         return;
     }
     console.log('README.md file has been created!')
+    fs.writeFile('README.md', generateMarkdown, (err) => {
+        if (err) throw err;
+        console.log('README.md file has been created!');
+    })
 }
 
 // TODO: Create a function to initialize app
