@@ -51,10 +51,6 @@ function generateMarkdown(data) {
 
    ${data.usage}
 
-   ## Credits 
-
-   ${data.credits}
-
    ## License
 
    This project is licensed under the ${data.license} license.
