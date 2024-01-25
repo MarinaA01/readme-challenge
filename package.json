@@ -1,0 +1,15 @@
+{
+  "name": "readme-challenge",
+  "version": "1.0.0",
+  "description": "Readme Challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marina Alonzo",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  },
+  "keywords": []
+}
