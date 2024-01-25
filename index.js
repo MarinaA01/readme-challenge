@@ -61,8 +61,12 @@ fs.writeToFile('README.md', readmeContent, (err) => {
 
 // TODO: Create a function to initialize app
 const init = () => {
-    questions
+    inquirer
+    .prompt([
+        questions
+    ])
     .then((answers) => writeToFile('README.md', generateMarkdown(answers)));
+    readmeContent;
 }
 
 // Function call to initialize app
