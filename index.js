@@ -49,12 +49,8 @@ const questions = [
     }
 ];
 
-inquirer.prompt(questions).then((answers) => {
-    const readmeContent = generateMarkdown(answers);
-});
-
 // TODO: Create a function to write README file
-fs.writeToFile('README.md', readmeContent, (err) => {
+fs.writeFile('README.md', generateMarkdown, (err) => {
     if (err) throw err;
     console.log('README.md file has been created!');
 })
@@ -62,11 +58,7 @@ fs.writeToFile('README.md', readmeContent, (err) => {
 // TODO: Create a function to initialize app
 const init = () => {
     inquirer
-    .prompt([
-        questions
-    ])
-    .then((answers) => writeToFile('README.md', generateMarkdown(answers)));
-    readmeContent;
+    .prompt(questions).then((answers) => writeToFile('README.md', generateMarkdown(answers)));
 }
 
 // Function call to initialize app
