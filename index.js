@@ -3,6 +3,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
 const { default: Choices } = require('inquirer/lib/objects/choices');
+const { error } = require('console');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -55,10 +56,18 @@ fs.writeFile('README.md', generateMarkdown, (err) => {
     console.log('README.md file has been created!');
 })
 
+function writeFile(fileName, generateMarkdown) {
+    if (err) {
+        console.error(err);
+        return;
+    }
+    console.log('README.md file has been created!')
+}
+
 // TODO: Create a function to initialize app
 const init = () => {
     inquirer
-    .prompt(questions).then((answers) => writeToFile('README.md', generateMarkdown(answers)));
+    .prompt(questions).then((answers) => writeFile('README.md', generateMarkdown(answers)));
 }
 
 // Function call to initialize app
