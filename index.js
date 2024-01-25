@@ -47,12 +47,18 @@ const questions = [
         type: 'input',
         name: 'github',
         message: 'Please attach a link to your Github: '
-    }
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'Please enter your email: '
+    },
 ];
 
 // TODO: Create a function to write README file
+// Help from Ask BCS learning Assistants
 
-function writeFile(fileName, generateMarkdown) {
+function writeFile(fileName, generateMarkdown, err) {
     if (err) {
         console.error(err);
         return;

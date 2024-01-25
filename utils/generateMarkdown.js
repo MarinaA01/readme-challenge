@@ -2,17 +2,15 @@
 // If there is no license, return an empty string
 // Lots of help from Learning assistants
 function renderLicenseBadge(license) {
-    let licenseType = license.license;
-    let yourLicense = ''
     
-    if(licenseType === 'MIT') {
+    if(license === 'MIT') {
         yourLicense = `![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`
-    } else if (licenseType === 'GPLv3') {
+    } else if (license === 'Apache 2.0') {
+        return '[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)';
+    } else if (license === 'GPLv3') {
         yourLicense = `![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)`
-    } else if (licenseType === 'GPL') {
-        yourLicense = `![GPL license](https://img.shields.io/badge/License-GPL-blue.svg)`
     } else {
-        license.license = 'N/A'
+        license = 'N/A'
     }
     return yourLicense;
 };
@@ -20,10 +18,15 @@ function renderLicenseBadge(license) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-    const licenses = {
-        'MIT': 'https://opensource.org/licenses/MIT',
-        'Apache 2.0': 'https://opensource.org/licenses/Apache-2.0'
-    }
+    if (license === 'MIT') {
+        return '[MIT License](https://opensource.org/licenses/MIT)';
+    } else if (license === 'Apache 2.0') {
+        return '[Apache License 2.0](https://opensource.org/licenses/Apache-2.0)';
+    } else if (license === 'GPLv3') {
+        return '[GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0)';
+    } else {
+        return '';
+  }
 }
 
 // TODO: Create a function that returns the license section of README
@@ -34,7 +37,7 @@ function renderLicenseSection(license) {}
 function generateMarkdown(data) {
   return `# ${data.title}
 
-  ${renderLicenseBadge(license)}
+  ${renderLicenseBadge(data.license)}
 
   ## Description
 
@@ -54,7 +57,7 @@ function generateMarkdown(data) {
 
    ## License
 
-   This project is licensed under the ${data.license} license. Learn more here: ${renderLicenseLink()}
+   This project is licensed under the ${data.license} license.
 
    ## Contributers
 
@@ -67,6 +70,8 @@ function generateMarkdown(data) {
    ## Questions
 
    ${data.github}
+
+   Feel free to reach out with more questions at ${data.email}
 
 `;
 }
