@@ -1,22 +1,29 @@
-# README Challenge
+# Readme Challenge
 
   ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
   ## Description
 
-   This project was created with Nodejs for companies who use README files on a daily basis and want an easier way to create these files.
+   This challenge builds README files with Node.js.
+
+   ## Table of Contents
+
+    * [Installation](#installation)
+    * [Usage](#usage)
+    * [License](#license)
+    * [Contributers](#contributers)
+    * [Tests](#tests)
+    * [Questions](#questions)
 
    ## Installation
 
-   This project is created using the inquirer package and Nodejs which must be installed on your device.
+   N/A
 
    ## Usage
 
-   Answer a few questions to get the perfect readme file!
+   [Walkthrough Video](assets/Node-Challenge-Video.mp4)
 
-   ## Credits 
-
-   undefined
+   You must have inquirer installed and node.js to use this project. Answer the prompt questions and generate the perfect README!
 
    ## License
 
@@ -24,7 +31,7 @@
 
    ## Contributers
 
-   Marina Alonzo, and learning assistants such as Xpert learning assistant and AskBCS Learning Assistants. They were super helpful with the functions.
+   Marina Alonzo, AskBCS tutors on Slack, Learning Xpert on Bootcamp Spot
 
    ## Tests
 
@@ -32,7 +39,8 @@
 
    ## Questions
 
-   https://github.com/MarinaA01
+   * [Github](www.github.com/MarinaA01)
+   * marina@gmail.com
 
-   Feel free to reach out with more questions at sample@email.com
+   Feel free to reach out with more questions at marina@gmail.com
 

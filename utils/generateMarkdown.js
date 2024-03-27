@@ -31,7 +31,17 @@ function renderLicenseLink(license) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+    if (license === 'MIT') {
+        return 'This project is licensed under the MIT license.';
+    } else if (license === 'Apache 2.0') {
+        return 'This project is licensed under the Apache 2.0 license.';
+    } else if (license === 'GPLv3') {
+        return 'This project is licensed under the GNU General Public License v3.0.';
+    } else {
+        return '';
+    }
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
@@ -43,6 +53,15 @@ function generateMarkdown(data) {
 
    ${data.description}
 
+   ## Table of Contents
+
+    * [Installation](#installation)
+    * [Usage](#usage)
+    * [License](#license)
+    * [Contributers](#contributers)
+    * [Tests](#tests)
+    * [Questions](#questions)
+
    ## Installation
 
    ${data.installation}
@@ -53,7 +72,7 @@ function generateMarkdown(data) {
 
    ## License
 
-   This project is licensed under the ${data.license} license.
+   ${renderLicenseSection(data.license)}
 
    ## Contributers
 
@@ -65,7 +84,8 @@ function generateMarkdown(data) {
 
    ## Questions
 
-   ${data.github}
+   * [Github](www.github.com/${data.github})
+   * ${data.email}
 
    Feel free to reach out with more questions at ${data.email}
 

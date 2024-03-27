@@ -46,7 +46,7 @@ const questions = [
     {
         type: 'input',
         name: 'github',
-        message: 'Please attach a link to your Github: '
+        message: 'Please enter your Github username: '
     },
     {
         type: 'input',
